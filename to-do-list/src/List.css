@@ -1,0 +1,16 @@
+.list {
+  font-family: Arial, sans-serif;
+}
+
+.task {
+  margin-right: 10px;
+}
+
+.status {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.closed {
+  color: red;
+}
