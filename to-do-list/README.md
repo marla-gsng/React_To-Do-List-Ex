@@ -67,7 +67,16 @@ Pass this function to the button in List
 
 ## Task 3: Add new items
 
-Will be added later via Moodle
+1. Create a component AddItem with an input field and a button with the text `add`.
+   Let App render the AddItem components.
+
+2. Create a local state in the AddItem component. In this state, you want to save the input when the user is typing. When the user stops typing or clicks the `add` button, this new item should be stored in state of App!
+
+3. App holds the state for the tasks. Add a a function `addOneItem` to App to change this state. Pass this function to the event handler on the add button in the AddItem component.
+
+Remember that the items are objects and have 3 properties: task, id and status. For a new item, the status should be open.
+
+The id also needs to have a value. For this you can use the length of the array or a uuid.
 
 ## Task 4: Edit an item
 

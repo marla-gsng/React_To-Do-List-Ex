@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import List from './List'
+import AddItem from './AddItem'
 import './App.css'
 
 
@@ -18,11 +19,23 @@ function App() {
     setTodoItems(updatedTodoItems);
   };
 
+
+    const addItem = (task) => {
+    const newItem = {
+      task: task,
+      status: 'open',
+      id: new Date().getTime().toString() 
+    };
+    setTodoItems([...todoItems, newItem]);
+  };
+
+
     
   return (
     <>
       <h1>My To Do List:</h1>
       <List todoItems={todoItems} removeTodo={removeTodo}/>
+       <AddItem addItem={addItem} />
 
     </>
   )
