@@ -12,5 +12,18 @@
 }
 
 .closed {
-  color: red;
+  color: darkolivegreen;
+}
+
+ul {
+  list-style-type: none;
+  align-items: left;
+  display: inline-block;
+}
+
+button {
+  color: white;
+  padding: 20px 20px;
+  margin: 8px 0;
+  border: none;
 }

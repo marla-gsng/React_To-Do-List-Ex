@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import List from './List'
-
 import './App.css'
+
 
 function App() {
    const [todoItems, setTodoItems] = useState([
@@ -13,25 +13,17 @@ function App() {
 
   ]);
 
-  
-    const toggleStatus = (id) => {
-    const updatedTodoItems = todoItems.map(todo => {
-      if (todo.id === id) {
-        return { ...todo, status: todo.status === 'open' ? 'closed' : 'open' };
-      }
-      return todo;
-    });
+    const removeTodo = (id) => {
+    const updatedTodoItems = todoItems.filter(todo => todo.id !== id);
     setTodoItems(updatedTodoItems);
   };
 
-
-
+    
   return (
     <>
       <h1>My To Do List:</h1>
-      <div className="App">
-        <List todoItems={todoItems}/>
-     </div>
+      <List todoItems={todoItems} removeTodo={removeTodo}/>
+
     </>
   )
 }

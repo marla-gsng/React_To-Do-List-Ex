@@ -1,7 +1,10 @@
 import './List.css'
 
 
-const List = ({todoItems}) => {
+const List = ({todoItems, removeTodo}) => {
+    const handleRemove =(id) => {
+        removeTodo(id);
+    }   
       return (
      <div className="list">
       <h2>Todo List</h2>
@@ -10,11 +13,16 @@ const List = ({todoItems}) => {
       ) : (
         <ul>
           {todoItems.map(todo => (
-            <li key={todo.id} className={todo.status}
+            <li key={todo.id} className={todo.status === 'open' ? 'open' : 'closed'}>
+              <span className="task">{todo.task}</span>
+              <input
+                type="checkbox"
+              />
+               <button onClick={() => removeTodo(todo.id)}>Delete</button>
             </li>
-          
+          ))}
         </ul>
-        )}
+      )}
     </div>
   )
 }

@@ -61,7 +61,9 @@ Navigate to this folder and type the following command on the terminal:
 
 ## Task 2: Delete an item
 
-Will be added later via Moodle
+Add a delete button to remove an item in the List component
+Add a function that handles the removing from state in App.
+Pass this function to the button in List
 
 ## Task 3: Add new items
 
